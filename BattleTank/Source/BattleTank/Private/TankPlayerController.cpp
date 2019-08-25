@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "DrawDebugHelpers.h"
 #include "TankPlayerController.h"
 
 void ATankPlayerController::BeginPlay()
@@ -35,7 +34,7 @@ void ATankPlayerController::AimTowardsCrosshair()
 	FVector HitLocation; // OUT Parameter
 	if (GetSightRayHitLocation(HitLocation))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Hit location: %s"), *HitLocation.ToString());
+		GetControlledTank()->AimAt(HitLocation);
 	}
 }
 
