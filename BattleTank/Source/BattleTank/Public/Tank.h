@@ -30,6 +30,7 @@ public:
 	void Fire();
 
 protected:
+	UPROPERTY(BlueprintReadOnly, Category = Movement)
 	UTankAimingComponent* TankAimingComponent = nullptr;
 
 	UPROPERTY(BlueprintReadOnly, Category = Movement)
